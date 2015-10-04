@@ -1,0 +1,8 @@
+html, body, .page, .ember-view, .off-canvas-wrap,.inner-wrap {height: 100%;}
+.move-right a.exit-off-canvas, .move-left a.exit-off-canvas {box-shadow: none;}
+.main-section {overflow: auto;}
+body{
+    background-image: url('../assets/images/bg2.jpg');
+    background-position: center center;
+    background-size: cover;
+}

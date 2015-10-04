@@ -1,0 +1,15 @@
+//Variabelen inladen
+@import 'core-variables';
+//basislaag
+@import 'core-base';
+@import 'core-font';
+@import 'core-layout';
+//basiscomponenten
+@import 'core-navigation';
+@import 'core-popup';
+@import 'core-forms';
+//paginas
+@import 'pagina-profiel';
+@import 'pagina-start';
+//eventuele fixes
+@import 'core-fixes';
