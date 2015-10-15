@@ -1,6 +1,14 @@
-angular.module('ipot').controller('testController', function($scope, apiFactory){
+angular.module('ipot').controller('testController', function($scope, Azureservice){
     console.log('test');
+    $scope.result = '';
     $scope.ophalen = function(){
-        var data = apiFactory.getData();
+        Azureservice.getAll('Person').then(function(items) {
+            console.log('Query successful', items);
+            var result = 'Hoi ' + items[0].firstname + ' ' + items[0].lastname + '!';
+            $scope.result = result;
+        }, function(err) {
+            console.error('Azure Error: ', err);
+        
+        });
     }
 });
