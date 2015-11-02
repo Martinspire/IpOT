@@ -108,6 +108,7 @@ gulp.task('vendor', function(){
     './node_modules/foundation-sites/js/vendor/fastclick.js',
     './node_modules/chart.js/Chart.js',
     './app/dev/assets/scripts/MobileServices.Web-1.2.5.min.js',
+    './app/dev/assets/scripts/ntc.js',
     './node_modules/angular/angular.js',
     './node_modules/angular-ui-router/release/angular-ui-router.js',
     './node_modules/angular-chart.js/dist/angular-chart.js',

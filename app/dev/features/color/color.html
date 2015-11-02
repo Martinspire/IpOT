@@ -1,0 +1,7 @@
+<div class="panel">
+    <h4>Colors</h4>
+    <p>Laatste kleur: <span ng-bind="myColorText"></span></p>
+    <div class="color-box" data-ng-style="{'background-color': myColor}" data-ng-class="{'no-color': noColor}"></div>
+    <br/><br/><br/>
+    <p><button type="button" class="button" data-ng-click="update()">Autoupdate</button> <button type="button" class="button" data-ng-click="stop()">Stop</button></p>
+</div>

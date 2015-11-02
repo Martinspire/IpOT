@@ -1,0 +1,32 @@
+/* line 1, E:/Projecten/ipot/app/dev/assets/sass/_core-base.scss */
+html, body, .page, .ember-view, .off-canvas-wrap, .inner-wrap {
+  height: 100%; }
+
+/* line 2, E:/Projecten/ipot/app/dev/assets/sass/_core-base.scss */
+.move-right a.exit-off-canvas, .move-left a.exit-off-canvas {
+  box-shadow: none; }
+
+/* line 3, E:/Projecten/ipot/app/dev/assets/sass/_core-base.scss */
+.main-section {
+  overflow: auto; }
+
+/* line 4, E:/Projecten/ipot/app/dev/assets/sass/_core-base.scss */
+body {
+  background-image: url("../assets/images/bg1.jpg");
+  background-position: center center;
+  background-size: cover; }
+
+/* line 1, E:/Projecten/ipot/app/dev/assets/sass/_core-layout.scss */
+.content {
+  padding: 20px; }
+
+/* line 4, E:/Projecten/ipot/app/dev/assets/sass/_core-layout.scss */
+.panel {
+  background: rgba(255, 255, 255, 0.75); }
+
+/* line 1, E:/Projecten/ipot/app/dev/assets/sass/_pagina-start.scss */
+.start-chart {
+  max-width: 400px;
+  max-height: 300px; }
+
+/*# sourceMappingURL=main.css.map */

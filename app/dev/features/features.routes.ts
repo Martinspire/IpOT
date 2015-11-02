@@ -12,9 +12,14 @@ angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
             templateUrl: 'features/profiel/profiel.html',
             controller: 'profielController'
         })
+        .state('base.color', {
+            url: '/color',
+            templateUrl: 'features/color/color.html',
+            controller: 'colorController'
+        })
         .state('base.test', {
             url: '/test',
             templateUrl: 'features/test/test.html',
             controller: 'testController'
-            });
+        });
 });
