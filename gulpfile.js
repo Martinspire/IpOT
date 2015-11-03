@@ -14,6 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var debug = require('gulp-debug');
 var order = require("gulp-order");
 var open = require('gulp-open');
+var templateCache = require('gulp-angular-templatecache');
 var config = new Config();
 
 // define tasks here
@@ -80,7 +81,8 @@ gulp.task('server', function () {
   server.start();
 
   // Restart the server when file changes 
-  gulp.watch(['app/dev/**/*.html', 'app/dist/index.html'], function (file) {
+    gulp.watch(['app/dev/**/*.html', 'app/dist/index.html'], function (file) {
+        gulp.start('compile-templates');
     server.notify.apply(server, [file]);
   });
   gulp.watch(['app/dev/assets/images/**/*'], function (file) {
@@ -100,6 +102,12 @@ gulp.task('server', function () {
 gulp.task('open', function(){
   gulp.src(__filename)
     .pipe(open({uri: 'http://localhost:4000?nobackend'}));
+});
+
+gulp.task('compile-templates', function(){
+    gulp.src('./app/dev/**/*.html')
+        .pipe(templateCache())
+        .pipe(gulp.dest('./app/dist/scripts'));
 });
 
 gulp.task('vendor', function(){
@@ -131,7 +139,7 @@ gulp.task('vendor', function(){
     .pipe(gulp.dest('./app/dist/styles'));
 });
 
-gulp.task('run', ['compile-ts', 'compile-sass', 'vendor'], function(){
+gulp.task('run', ['compile-ts', 'compile-sass', 'compile-templates', 'vendor'], function(){
   gulp.start('server');
   gulp.start('open');
 });

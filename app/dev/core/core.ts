@@ -5,4 +5,4 @@
     angular.module('ipot.filters', []);
     angular.module('ipot.init', []);
     angular.module('ipot.services', []);
-    angular.module('ipot.templates', []);
+    angular.module('templates', []);

@@ -36,7 +36,9 @@ angular.module('ipot').controller('colorController', function($scope, $http, $ti
     function getData(){
         $http.get('http://i-potwebapi.azurewebsites.net/odata/ToiletgangResultaten/').then(function(data){
             console.log(data);
-            getKleur(data);
+            if(data !== undefined && data.data !== undefined){
+                getKleur(data.data);
+            }
         }, function(error){
             console.log(error);
         });

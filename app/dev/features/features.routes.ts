@@ -3,7 +3,7 @@ angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
 // For any unmatched url, send to /route1
     $stateProvider
         .state('base.start', {
-            url: '/',
+            url: '/start',
             templateUrl: 'features/start/start.html',
             controller: 'startController'
         })
@@ -13,7 +13,7 @@ angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
             controller: 'profielController'
         })
         .state('base.color', {
-            url: '/color',
+            url: '/',
             templateUrl: 'features/color/color.html',
             controller: 'colorController'
         })

@@ -4,3 +4,13 @@
 .panel{
     background: rgba(255,255,255,0.75);   
 }
+.panel h4{
+    color: $accentcolor;
+}
+
+@media screen and (max-width: $break-medium) {
+    .content{
+        padding:10px;
+    }
+    
+}
