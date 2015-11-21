@@ -1,4 +1,4 @@
-angular.module('ipot').controller('testController', function($scope, Azureservice){
+angular.module('ipot').controller('testController', ['$scope', 'Azureservice', function($scope, Azureservice){
     console.log('test');
     $scope.result = '';
     $scope.ophalen = function(){
@@ -10,5 +10,5 @@ angular.module('ipot').controller('testController', function($scope, Azureservic
             console.error('Azure Error: ', err);
         
         });
-    }
-});
+    };
+}]);

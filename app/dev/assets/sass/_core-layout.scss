@@ -3,14 +3,23 @@
 }
 .panel{
     background: rgba(255,255,255,0.75);   
+    padding:20px;
 }
 .panel h4{
     color: $accentcolor;
+}
+.off-canvas-content{
+    background:none;
+}
+.off-canvas-wrapper, .off-canvas-wrapper-inner, .off-canvas, .off-canvas-content{
+    height:100%;
 }
 
 @media screen and (max-width: $break-medium) {
     .content{
         padding:10px;
+    }    
+    .panel{
+        padding:10px;
     }
-    
 }

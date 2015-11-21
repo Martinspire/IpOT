@@ -1,4 +1,4 @@
-angular.module("ipot", [
+angular.module('ipot', [
     'ipot.core',
     'ipot.init',
     'ipot.services',

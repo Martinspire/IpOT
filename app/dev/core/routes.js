@@ -1,7 +1,7 @@
-angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
+angular.module('ipot').config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
     // For any unmatched url, send to /route1
-    $urlRouterProvider.otherwise("/")
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('base', {
@@ -33,5 +33,5 @@ angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
         .state('loading', {
             url: 'loading',
             templateUrl: 'core/loading/loading.html'
-        })
-});
+        });
+}]);

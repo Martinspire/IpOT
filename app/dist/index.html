@@ -1,26 +1,24 @@
 <!doctype html>
 <html class="no-js" lang="en" data-ng-app="ipot" data-framework="typescript">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
         <title>IpOT app</title>
         <meta http-equiv="cleartype" content="on" />
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1,user-scalable=no"/>
 
         <link rel="stylesheet" href="styles/vendor.css" />
         <link rel="stylesheet" href="assets/font/foundation-icons/foundation-icons.css" />
-        <link rel="stylesheet" href="styles/main.css">
-        <style>[ng-cloak] { display: none; }</style>
-
+        <link rel="stylesheet" href="styles/main.css"/>
+        <style>.ng-cloak { display: none; }</style>
     </head>
 
     <body>
-        <div class="page">
-            <div class="off-canvas-wrap" data-offcanvas>
-                <div class="inner-wrap">
-                    <div ui-view="navigation"></div>
-
+        <div class="off-canvas-wrapper ng-cloak">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="true">
+                <div class="off-canvas position-left" id="offCanvas" data-off-canvas="true" data-position="left"><div ui-view="navigation"></div></div>
+                <div class="off-canvas-content" data-off-canvas-content="true">
                     <div ui-view="header"></div>
 
                     <div ui-view="content" id="content" class="content"></div>
@@ -34,16 +32,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/templates.js"></script>
         <script>
-            $(document).foundation({
-                offcanvas : {
-                    // Sets method in which offcanvas opens.
-                    // [ move | overlap_single | overlap ]
-                    open_method: 'move', 
-                    // Should the menu close when a menu link is clicked?
-                    // [ true | false ]
-                    close_on_click : true
-                }
-            });
+            $(document).foundation();
         </script>
     </body>
 </html>

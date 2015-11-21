@@ -1,0 +1,54 @@
+env:
+  browser: true
+  node: true
+  mocha: true
+
+rules:
+  indent: [0, 'tab']
+  brace-style: [2, "stroustrup"]
+  comma-style: [2, "last"]
+  default-case: 2
+  func-style: [2, "declaration"]
+  no-floating-decimal: 2
+  no-nested-ternary: 2
+  no-undefined: 0
+  radix: 2
+  space-before-function-paren: [0, "never"]
+  space-after-keywords: [0, "always"]
+  space-before-blocks: 0
+  spaced-comment: [0, "always", { exceptions: ["-"]}]
+  valid-jsdoc: [1, { requireReturn: false, prefer: { return": "returns" }}]
+  wrap-iife: 2
+  guard-for-in: 2
+  strict: [0, "global"]
+  no-alert: 1
+  camelcase: 1
+  curly: [2]
+  eqeqeq: [2, "allow-null"]
+  no-empty: 1
+  no-dupe-args: 2
+  no-dupe-keys: 2
+  no-underscore-dangle: 0
+  no-use-before-define: 2
+  no-obj-calls: 2
+  no-unused-vars: [0, {"vars": "local", "args": "after-used"}]
+  new-cap: 2
+  no-shadow: 1
+  no-invalid-regexp: 2
+  comma-dangle: [2, "never"]
+  no-undef: 1
+  no-new: 2
+  no-extra-semi: 1
+  no-debugger: 1
+  no-caller: 1
+  semi: 1
+  quotes: [1, "single", "avoid-escape"]
+  no-unreachable: 2
+  eol-last: 0
+
+globals:
+  browser: true
+  element: true
+  angular: true
+  ntc: true
+  $: true

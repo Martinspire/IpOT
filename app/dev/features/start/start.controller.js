@@ -1,7 +1,7 @@
-angular.module('ipot').controller('startController', function($scope){
+angular.module('ipot').controller('startController', ['$scope', function($scope){
     console.log('start');
     
-    $scope.labels = ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "July"];
+    $scope.labels = ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'July'];
     $scope.series = ['Kleur', 'Ph waarde'];
     $scope.data = [
         [65, 59, 80, 81, 56, 55, 40],
@@ -10,4 +10,4 @@ angular.module('ipot').controller('startController', function($scope){
     $scope.onClick = function (points, evt) {
         console.log(points, evt);
     };
-});
+}]);

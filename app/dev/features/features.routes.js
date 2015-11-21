@@ -1,4 +1,4 @@
-angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
+angular.module('ipot').config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
 // For any unmatched url, send to /route1
     $stateProvider
@@ -22,4 +22,4 @@ angular.module('ipot').config(function($stateProvider, $urlRouterProvider){
             templateUrl: 'features/test/test.html',
             controller: 'testController'
         });
-});
+}]);

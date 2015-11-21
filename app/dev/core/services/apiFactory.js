@@ -1,4 +1,4 @@
-angular.module('ipot.services').factory('apiFactory', function(Azureservice){
+angular.module('ipot.services').factory('apiFactory', ['Azureservice', function(Azureservice){
     var result = {
         getData : undefined
     };
@@ -11,7 +11,7 @@ angular.module('ipot.services').factory('apiFactory', function(Azureservice){
             console.error('Azure Error: ' + err);
             return err;
         });
-    }
+    };
     
     return result;
-});
+}]);
