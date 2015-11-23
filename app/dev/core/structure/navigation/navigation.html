@@ -1,15 +1,19 @@
-<button class="close-button" aria-label="Close menu" type="button" data-close="true">
-    <span aria-hidden="true">&times;</span>
-</button>
-<h3>Menu:</h3>
-<ul class="off-canvas vertical menu">
-    <li><a ui-sref="base.start">Start</a></li>
-    <li><a ui-sref="base.profiel">Profiel</a></li>
-    <li><a href="#">Statistieken</a></li>
-    <li><a href="#">Adviezen</a></li>
-    <li><a href="#">Instellingen</a></li>
-    <li><a href="#">Help</a></li>
+<nav>
+<ul class="vertical menu">
+    <li><a ui-sref="base.start" ui-sref-active="active">Start</a></li>
+    <li><a ui-sref="base.profiel" ui-sref-active="active">Profiel</a></li>
+    <li><a ui-sref="base.stats" ui-sref-active="active">Statistieken</a></li>
+    <li><a ui-sref="base.advies" ui-sref-active="active">Advies</a></li>
+    <li><a ui-sref="base.contact" ui-sref-active="active">Contact</a></li>
+    <li><a ui-sref="base.instellingen" ui-sref-active="active">Instellingen</a></li>
+    <li><a ui-sref="base.help" ui-sref-active="active">Help</a></li>
     <li class="divider"></li>
-    <li class="title">Tijdelijk:</li>
-    <li><a ui-sref="base.color">Kleurensensor</a></li>
+    <li><a ui-sref="base.color" ui-sref-active="active">Kleurensensor</a></li>
+    <li><a ui-sref="base.welke" ui-sref-active="active">Welke van de 2</a></li>
+    <li class="divider"></li>
+    <li><a ui-sref="base.dashboard" ui-sref-active="active">Dashboard</a></li>
+    <li><a ui-sref="base.patienten" ui-sref-active="active">Patienten</a></li>
+    <li class="divider"></li>
+    <li><a ui-sref="base.aanmelden" ui-sref-active="active">Aanmelden</a></li>
 </ul>
+</nav>

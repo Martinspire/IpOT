@@ -15,11 +15,11 @@
     </head>
 
     <body>
+        <div ui-view="header"></div>
         <div class="off-canvas-wrapper ng-cloak">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="true">
                 <div class="off-canvas position-left" id="offCanvas" data-off-canvas="true" data-position="left"><div ui-view="navigation"></div></div>
                 <div class="off-canvas-content" data-off-canvas-content="true">
-                    <div ui-view="header"></div>
 
                     <div ui-view="content" id="content" class="content"></div>
 

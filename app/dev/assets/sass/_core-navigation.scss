@@ -1,11 +1,35 @@
 .off-canvas{
-    background-color:#000;
-    color:#fff;
+    background-color: darken($blue, 25%);
+    color: #fefefe;
+    overflow: hidden;
     ul{
         width:100%;
+        margin-top:10px;
+    }
+    li{
+    	margin: 2px 10px;
     }
     li.divider{
-        border-top:1px solid #000;
+        border-top:1px solid $black;
         margin:5px;
+    }
+    li a, li.title{
+		padding: 1rem;
+		border-radius:3px;
+		display:block;
+    }
+    li.title{
+    	color: $grey;
+    }
+    li a{
+        color: lighten($blue, 25%);
+    }
+    li a:hover{
+		background: $white;
+		color:$blue;
+    }
+    li a.active{
+    	background: $blue;
+    	color:$white;
     }
 }

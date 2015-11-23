@@ -2,11 +2,27 @@
     padding:20px;
 }
 .panel{
-    background: rgba(255,255,255,0.75);   
-    padding:20px;
+    background-color:#fff;
+    border-radius:$borderradius;
+    box-shadow: $panelshadow;
+    border: 1px solid $bordercolor;
 }
-.panel h4{
-    color: $accentcolor;
+.panel header{
+    background-color: $bluebackground;
+    border-color:$bordercolor;
+    border-bottom:1px solid $bordercolor;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding:20px;
+    text-transform: uppercase;
+    font-weight:bold;
+    color: $blue;
+}
+.panel header.white{
+    background-color:$white;
+}
+.panel section{
+    padding: 20px;
 }
 .off-canvas-content{
     background:none;
@@ -14,7 +30,17 @@
 .off-canvas-wrapper, .off-canvas-wrapper-inner, .off-canvas, .off-canvas-content{
     height:100%;
 }
-
+.js-off-canvas-exit{
+    background:none;
+    transition:none;
+}
+.off-canvas-content{
+    box-shadow:none;
+}
+.title-bar {
+    background: $bluetinted;
+    padding:1rem;
+}
 @media screen and (max-width: $break-medium) {
     .content{
         padding:10px;

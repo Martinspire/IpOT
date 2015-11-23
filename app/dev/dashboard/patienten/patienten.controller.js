@@ -1,5 +1,5 @@
-angular.module('ipot').controller('startController', ['$scope', function($scope){
-    console.log('start');
+angular.module('ipot').controller('patientenController', ['$scope', function($scope){
+    console.log('patienten');
     
     $scope.labels = ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'July'];
     $scope.series = ['Kleur', 'Ph waarde'];

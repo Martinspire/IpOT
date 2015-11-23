@@ -1,4 +1,4 @@
-angular.module('ipot').controller('testController', ['$scope', 'Azureservice', function($scope, Azureservice){
+angular.module('ipot').controller('welkeController', ['$scope', 'Azureservice', function($scope, Azureservice){
     console.log('test');
     $scope.result = '';
     $scope.ophalen = function(){
