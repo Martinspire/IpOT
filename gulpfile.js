@@ -31,7 +31,7 @@ gulp.task('default', ['run']);
 
 gulp.task('compile-js', function() {
     return gulp.src(config.devJs)
-        .pipe(plumber())
+        .pipe(plumber(config.plumberOptions))
         .pipe(order([
             'app/dev/core/app.js',
             'app/dev/core/core.js',
@@ -49,7 +49,7 @@ gulp.task('compile-js', function() {
 
 gulp.task('compile-sass', function() {
     gulp.src(config.devScssMain)
-        .pipe(plumber())
+        .pipe(plumber(config.plumberOptions))
         .pipe(sourcemaps.init())
         //.pipe(sasslint({config: '.sass-lint.yml'})) Currently broken
         //.pipe(sasslint.format()) Currently Broken
@@ -61,7 +61,7 @@ gulp.task('compile-sass', function() {
 
 gulp.task('compile-templates', function() {
     gulp.src(config.devHtml)
-        .pipe(plumber())
+        .pipe(plumber(config.plumberOptions))
         .pipe(htmlhint(config.htmlOptions))
         .pipe(htmlhint.reporter())
         .pipe(sourcemaps.init())
@@ -72,18 +72,22 @@ gulp.task('compile-templates', function() {
 
 gulp.task('vendor', function() {
     gulp.src(config.vendorJs)
-        .pipe(plumber())
+        .pipe(plumber(config.plumberOptions))
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.outputScripts));
 
     gulp.src(config.vendorCss)
-        .pipe(plumber())
+        .pipe(plumber(config.plumberOptions))
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.outputScss));
+
+    gulp.src(config.vendorFonts)
+        .pipe(plumber(config.plumberOptions))
+        .pipe(gulp.dest(config.outputFonts));
 });
 
 gulp.task('server', function() {
@@ -115,6 +119,7 @@ gulp.task('server', function() {
 
 gulp.task('open', function() {
     gulp.src(__filename)
+        .pipe(plumber(config.plumberOptions))
         .pipe(open({
             uri: 'http://localhost:4000?nobackend'
         }));

@@ -40,6 +40,28 @@
 .title-bar {
     background: $bluetinted;
     padding:1rem;
+    .horizontal.menu{
+        position:relative;
+        >li>a{
+            padding: 0 1rem;
+        }
+        .menu{
+            position:absolute;
+            top:41px;
+            left:-30px;
+            z-index:99;
+            background-color:$white;
+            border: 1px solid $bordercolor;
+            text-align:left;
+            box-shadow:0 2px 5px $blackshadow;
+            a{
+                color:$blue;
+            }
+        }
+    }
+    a{
+        color:#fff;
+    }
 }
 @media screen and (max-width: $break-medium) {
     .content{

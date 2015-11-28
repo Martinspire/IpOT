@@ -6,6 +6,7 @@ var GulpConfig = (function () {
         this.outputJs = './app/dist/scripts/';
         this.outputScss = './app/dist/styles';
         this.outputScripts = './app/dist/scripts';
+        this.outputFonts = './app/dist/fonts';
         this.serverFilesJs = 'server/**/*.js';
         this.serverJs = 'server/server.js';
         this.devJs = ['./app/dev/**/*.js', '!./app/dev/assets/scripts/**/*.js'];
@@ -27,8 +28,12 @@ var GulpConfig = (function () {
 		    './node_modules/foundation-sites/dist/foundation.js'
 		];
 		this.vendorCss = [
+		    './node_modules/font-awesome/css/font-awesome.min.css',
 		    './node_modules/foundation-sites/dist/foundation.min.css',
 		    './node_modules/angular-chart.js/dist/angular-chart.css'
+		];
+		this.vendorFonts = [
+			'./node_modules/font-awesome/fonts/*'
 		];
 		this.sassOptions = {
 			errLogToConsole: true,
@@ -52,6 +57,12 @@ var GulpConfig = (function () {
 			'tag-self-close': true,
 			'tagname-lowercase': true
 		};
+		this.plumberOptions = {
+	        handleError: function (err) {
+	            console.log(err);
+	            this.emit('end');
+	        }
+	    };
     }
     return gulpConfig;
 })();

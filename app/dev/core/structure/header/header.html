@@ -3,4 +3,22 @@
 	    <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
 	    <span class="title-bar-title">IpOT</span>
     </div>
+    <div class="title-bar-right">
+    	<ul class="horizontal menu">
+	      	<li data-ng-init="dropdown = false">
+	    		<a data-ng-click="dropdown = !dropdown">
+		      		<span class="fa fa-sitemap"></span>
+		      		
+		        </a>
+		        <ul class="vertical menu" data-ng-show="dropdown === true">
+		        	<li><a href="#">Demo 1</a></li>
+		        	<li><a href="#">Demo 2</a></li>
+		         	<li><a href="#">Mobile</a></li>
+		          	<li><a href="#">Dashboard</a></li>
+		        </ul>	        
+	        </li>
+	      	<li><a href="#"><span class="fa fa-comment"></span></a></li>
+	      	<li><a href="#"><span class="fa fa-newspaper-o"></span></a></li>
+	    </ul>
+    </div>
 </div>
