@@ -1,19 +1,22 @@
 <nav>
-<ul class="vertical menu">
-    <li><a ui-sref="base.start" ui-sref-active="active">Start</a></li>
-    <li><a ui-sref="base.profiel" ui-sref-active="active">Profiel</a></li>
-    <li><a ui-sref="base.stats" ui-sref-active="active">Statistieken</a></li>
-    <li><a ui-sref="base.advies" ui-sref-active="active">Advies</a></li>
-    <li><a ui-sref="base.contact" ui-sref-active="active">Contact</a></li>
-    <li><a ui-sref="base.instellingen" ui-sref-active="active">Instellingen</a></li>
-    <li><a ui-sref="base.help" ui-sref-active="active">Help</a></li>
-    <li class="divider"></li>
-    <li><a ui-sref="base.color" ui-sref-active="active">Kleurensensor</a></li>
-    <li><a ui-sref="base.welke" ui-sref-active="active">Welke van de 2</a></li>
-    <li class="divider"></li>
-    <li><a ui-sref="base.dashboard" ui-sref-active="active">Dashboard</a></li>
-    <li><a ui-sref="base.patienten" ui-sref-active="active">Patienten</a></li>
-    <li class="divider"></li>
-    <li><a ui-sref="base.aanmelden" ui-sref-active="active">Aanmelden</a></li>
-</ul>
+    <ul class="vertical menu" data-ng-if="mode.platform === 'login'">
+        <li><a ui-sref="base.aanmelden" ui-sref-active="active">Aanmelden</a></li>
+    </ul>
+    <ul class="vertical menu" data-ng-if="mode.platform === 'mobile'">
+        <li><a ui-sref="base.mobile" ui-sref-active="active">Start</a></li>
+        <li><a ui-sref="base.profiel" ui-sref-active="active">Profiel</a></li>
+        <li><a ui-sref="base.stats" ui-sref-active="active">Statistieken</a></li>
+        <li><a ui-sref="base.advies" ui-sref-active="active">Advies</a></li>
+        <li><a ui-sref="base.contact" ui-sref-active="active">Contact</a></li>
+        <li><a ui-sref="base.instellingen" ui-sref-active="active">Instellingen</a></li>
+        <li><a ui-sref="base.help" ui-sref-active="active">Help</a></li>
+    </ul>
+    <ul class="vertical menu" data-ng-if="mode.platform === 'dashboard'">
+        <li><a ui-sref="base.dashboard" ui-sref-active="active">Dashboard</a></li>
+        <li><a ui-sref="base.patienten" ui-sref-active="active">Patienten</a></li>
+    </ul>
+    <ul class="vertical menu" data-ng-if="mode.platform === 'test'">
+        <li><a ui-sref="base.color" ui-sref-active="active">Kleurensensor</a></li>
+        <li><a ui-sref="base.welke" ui-sref-active="active">Welke van de 2</a></li>
+    </ul>
 </nav>

@@ -1,21 +1,26 @@
 <div class="title-bar">
     <div class="title-bar-left">
-	    <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+	    <button class="menu-icon" type="button" data-ng-click="toggleSideMenu()"></button>
 	    <span class="title-bar-title">IpOT</span>
     </div>
     <div class="title-bar-right">
     	<ul class="horizontal menu">
-	      	<li data-ng-init="dropdown = false">
-	    		<a data-ng-click="dropdown = !dropdown">
-		      		<span class="fa fa-sitemap"></span>
-		      		
+	      	<li>
+	    		<a data-ng-click="toggleModeSwitcher()" data-ng-class="{active: modeSwitcher === true}">
+		      		<span class="fa fa-sitemap"></span>	    		
 		        </a>
-		        <ul class="vertical menu" data-ng-show="dropdown === true">
-		        	<li><a href="#">Demo 1</a></li>
-		        	<li><a href="#">Demo 2</a></li>
-		         	<li><a href="#">Mobile</a></li>
-		          	<li><a href="#">Dashboard</a></li>
-		        </ul>	        
+		        <ul class="vertical menu" data-ng-show="modeSwitcher === true">
+		        	<li><a data-ng-click="setMode('start')">Start</a></li>
+		        	<li><a data-ng-click="setMode('demo1')">Demo1 - Color</a></li>
+		        	<li><a data-ng-click="setMode('demo2')">Demo2 - Welke</a></li>
+		        	<li><a data-ng-click="setMode('demo3')">Demo3 - Gebruiker goed</a></li>
+		        	<li><a data-ng-click="setMode('demo4')">Demo4 - Gebruiker slecht</a></li>
+		        	<li><a data-ng-click="setMode('demo5')">Demo5 - Dokter</a></li>
+		        	<li><a data-ng-click="setMode('demo6')">Demo6 - Aanmelden</a></li>
+		        	<li><a data-ng-click="setMode('user1')">User1 - Gebruiker goed</a></li>
+		        	<li><a data-ng-click="setMode('user2')">User2 - Gebruiker slecht</a></li>
+		        	<li><a data-ng-click="setMode('user3')">User3 - Dokter</a></li>
+		        </ul>
 	        </li>
 	      	<li><a href="#"><span class="fa fa-comment"></span></a></li>
 	      	<li><a href="#"><span class="fa fa-newspaper-o"></span></a></li>

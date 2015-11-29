@@ -1,6 +1,41 @@
-.content{
-    padding:20px;
+.wrapper{
+    position:relative;
+    height:100%;
+    width:100%;
 }
+.wrapper>.side-menu{
+    position:absolute;
+    top:0;
+    left:-250px;
+    bottom:0;
+    width:250px;
+    z-index:50;
+    transition: left 500ms ease;
+}
+.wrapper.show-sidebar>.side-menu{
+    left:0;
+}
+.wrapper>.header{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    z-index:99;
+}
+.wrapper>.content{
+    position:relative;
+    overflow:auto;
+    padding:80px 20px 20px;;
+}
+.wrapper>.exit{
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index:49;
+    }
 .panel{
     background-color:#fff;
     border-radius:$borderradius;
@@ -24,31 +59,21 @@
 .panel section{
     padding: 20px;
 }
-.off-canvas-content{
-    background:none;
-}
-.off-canvas-wrapper, .off-canvas-wrapper-inner, .off-canvas, .off-canvas-content{
-    height:100%;
-}
-.js-off-canvas-exit{
-    background:none;
-    transition:none;
-}
-.off-canvas-content{
-    box-shadow:none;
-}
 .title-bar {
     background: $bluetinted;
     padding:1rem;
     .horizontal.menu{
         position:relative;
         >li>a{
-            padding: 0 1rem;
+            margin: 0 1rem;
+            padding: 4px;
+            border-radius:6px;
         }
         .menu{
             position:absolute;
             top:41px;
-            left:-30px;
+            left:-88px;
+            width:250px;
             z-index:99;
             background-color:$white;
             border: 1px solid $bordercolor;
@@ -61,6 +86,18 @@
     }
     a{
         color:#fff;
+    }
+    a.active{
+        color:$blue;
+        background-color:$white;
+    }
+    .exit{
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index:98;
     }
 }
 @media screen and (max-width: $break-medium) {

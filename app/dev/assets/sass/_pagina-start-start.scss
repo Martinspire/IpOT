@@ -1,0 +1,16 @@
+.demo-select{
+	float:left;
+	display:inline-block;
+	padding:30px;
+	width:150px;
+	margin:20px;
+	background-color:$green;
+	border-radius:4px;
+	color:$white;
+	font-weight:bold;
+	text-align:center;
+	cursor:pointer;
+}
+.demo-select:hover{
+	background-color:$purple;
+}

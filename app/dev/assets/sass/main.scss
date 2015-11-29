@@ -9,8 +9,21 @@
 @import 'core-popup';
 @import 'core-forms';
 //paginas
-@import 'pagina-start';
-@import 'pagina-profiel';
-@import 'pagina-color';
+@import 'pagina-dashboard-dashboard';
+@import 'pagina-dashboard-patient';
+@import 'pagina-dashboard-patienten';
+@import 'pagina-login-aanmelden';
+@import 'pagina-login-login';
+@import 'pagina-mobile-advies';
+@import 'pagina-mobile-contact';
+@import 'pagina-mobile-help';
+@import 'pagina-mobile-instellingen';
+@import 'pagina-mobile-profiel';
+@import 'pagina-mobile-start';
+@import 'pagina-mobile-stats';
+@import 'pagina-mobile-toilet';
+@import 'pagina-start-start';
+@import 'pagina-test-color';
+@import 'pagina-test-welke';
 //eventuele fixes
 @import 'core-fixes';

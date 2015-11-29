@@ -1,0 +1,17 @@
+.color-box{
+    width:100px;
+    height:100px;
+    position:relative;
+    border:1px solid #dedede;
+    border-radius:10px;
+    
+}
+.color-box.no-color::before{
+    content: 'Geen kleur beschikbaar';
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:25px;
+    left:0;
+    text-align: center;
+}

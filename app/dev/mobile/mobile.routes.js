@@ -2,15 +2,10 @@ angular.module('ipot').config(['$stateProvider', '$urlRouterProvider', function(
 
 // For any unmatched url, send to /route1
     $stateProvider
-        .state('base.start', {
-            url: '/',
+        .state('base.mobile', {
+            url: '/mobile',
             templateUrl: 'mobile/start/start.html',
             controller: 'mobileStartController'
-        })
-        .state('base.aanmelden', {
-            url: '/aanmelden',
-            templateUrl: 'mobile/aanmelden/aanmelden.html',
-            controller: 'aanmeldenController'
         })
         .state('base.advies', {
             url: '/advies',
