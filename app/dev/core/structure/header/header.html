@@ -5,6 +5,7 @@
     </div>
     <div class="title-bar-right">
     	<ul class="horizontal menu">
+    		<li data-ng-show="user.voornaam !== undefined && user.voornaam !== ''">Hi <span data-ng-bind="user.voornaam"></span>!</li>
 	      	<li>
 	    		<a data-ng-click="toggleModeSwitcher()" data-ng-class="{active: modeSwitcher === true}">
 		      		<span class="fa fa-sitemap"></span>	    		

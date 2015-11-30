@@ -27,8 +27,6 @@ build/Release
 node_modules
 *.DS_Store
 *.map
-app/dist/styles/foundation.css
-app/dist/styles/main.css
-app/dist/styles/vendor.css
-app/dist/scripts/app.js
-app/dist/scripts/vendor.js
+app/dist/styles/*
+app/dist/scripts/*
+app/dist/fonts/*
