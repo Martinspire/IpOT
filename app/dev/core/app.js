@@ -7,6 +7,10 @@ angular.module('ipot', [
     'ipot.directives',
     'templates',
     'ui.router',
+    'ngAnimate',
+    'ngMessages',
+    'ngSanitize',
+    'ngTouch',
     'chart.js',
     'azure-mobile-service.module'
 ]);

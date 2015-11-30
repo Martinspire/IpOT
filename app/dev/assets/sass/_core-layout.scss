@@ -10,7 +10,7 @@
     bottom:0;
     width:250px;
     z-index:50;
-    transition: left 500ms ease;
+    transition: left 333ms ease;
 }
 .wrapper.show-sidebar>.side-menu{
     left:0;
@@ -71,20 +71,28 @@
             margin: 0 1rem;
             padding: 4px;
             border-radius:6px;
+            z-index:51;
+            position:relative;
         }
         .menu{
+            visibility:hidden;
             position:absolute;
-            top:41px;
+            top:-500px;
             left:-88px;
             width:250px;
-            z-index:99;
+            z-index:50;
             background-color:$white;
             border: 1px solid $bordercolor;
             text-align:left;
             box-shadow:0 2px 5px $blackshadow;
+            transition: top 333ms ease;
             a{
                 color:$blue;
             }
+        }
+        .menu.show{
+            visibility:visible;
+            top:41px;
         }
     }
     a{
