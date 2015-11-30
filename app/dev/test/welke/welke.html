@@ -1,13 +1,14 @@
 <div class="panel">
-    <header>Testpagina</header>
-    <sectiom>
-	    <p>Data ophalen van service</p>
-	    <div class="test">
-	        <textarea rows="5" placeholder="Input">{{testdata}}</textarea>
-	    </div>
-	    <button type="button" class="button" data-ng-click="ophalen()">Ophalen</button>
-	    <div class="test">
-	        <textarea rows="5" placeholder="Output">{{result}}</textarea>
-	    </div>
-    </sectiom>
+    <header>Wat is het?</header>
+    <section>
+    	<p>Is het:</p>
+    	<div class="item-box small cola"><span>Cola</span></div>
+    	<div class="item-box small sinas"><span>Sinas</span></div>
+    	<div class="item-box small water"><span>Water</span></div>
+    	<br/><br/>
+    	<p>Laatste selectie: <span ng-bind="itemText"></span></p>
+    	<div class="item-box" data-ng-class="itemClass"><span data-ng-bind="itemText"></span></div>
+	    <br/><br/>
+	    <p><button type="button" class="button" data-ng-click="update()" data-ng-class="{success: autoUpdate}">Autoupdate</button> <button type="button" class="button" data-ng-click="stop()" data-ng-class="{alert: !autoUpdate}">Stop</button></p>
+    </section>
 </div>

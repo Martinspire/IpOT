@@ -1,17 +1,35 @@
-.color-box{
+.item-box{
     width:100px;
     height:100px;
     position:relative;
-    border:1px solid #dedede;
     border-radius:10px;
-    
+    display:inline-block;
+    margin:10px 10px 10px 0;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
-.color-box.no-color::before{
-    content: 'Geen kleur beschikbaar';
-    height:100px;
-    width:100px;
+.item-box span{
     position:absolute;
-    top:25px;
-    left:0;
-    text-align: center;
+    top:75px;
+    width:100%;
+    background-color:#fff;
+    font-weight:bold;
+    font-size:10px;
+    text-align:center;
+}
+.item-box.cola{
+    background-image: url('../assets/images/cola.jpg');
+    background-size:cover;
+}
+.item-box.sinas{
+    background-image: url('../assets/images/sinas.jpg');
+    background-size:cover;
+}
+.item-box.water{
+    background-image: url('../assets/images/water.jpg');
+    background-size:cover;
+}
+.item-box.nothing{
+    background-image: url('../assets/images/loader1.gif');
+    background-position:center center;
+    background-repeat: no-repeat;
 }
