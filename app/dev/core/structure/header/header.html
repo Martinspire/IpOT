@@ -4,27 +4,29 @@
 	    <span class="title-bar-title">IpOT</span>
     </div>
     <div class="title-bar-right">
-    	<ul class="horizontal menu">
-    		<li data-ng-show="user.voornaam !== undefined && user.voornaam !== ''">Hi <span data-ng-bind="user.voornaam"></span>!</li>
-	      	<li>
-	    		<a data-ng-click="toggleModeSwitcher()" data-ng-class="{active: modeSwitcher === true}">
-		      		<span class="fa fa-sitemap"></span>	    		
-		        </a>
-		        <ul class="vertical menu" data-ng-class="{show: modeSwitcher === true}">
-		        	<li><a data-ng-click="setMode('start')">Start</a></li>
-		        	<li><a data-ng-click="setMode('demo1')">Demo1 - Color</a></li>
-		        	<li><a data-ng-click="setMode('demo2')">Demo2 - Welke</a></li>
-		        	<li><a data-ng-click="setMode('demo3')">Demo3 - Gebruiker goed</a></li>
-		        	<li><a data-ng-click="setMode('demo4')">Demo4 - Gebruiker slecht</a></li>
-		        	<li><a data-ng-click="setMode('demo5')">Demo5 - Dokter</a></li>
-		        	<li><a data-ng-click="setMode('demo6')">Demo6 - Aanmelden</a></li>
-		        	<li><a data-ng-click="setMode('user1')">User1 - Gebruiker goed</a></li>
-		        	<li><a data-ng-click="setMode('user2')">User2 - Gebruiker slecht</a></li>
-		        	<li><a data-ng-click="setMode('user3')">User3 - Dokter</a></li>
-		        </ul>
-	        </li>
-	      	<li><a href="#"><span class="fa fa-comment"></span></a></li>
-	      	<li><a href="#"><span class="fa fa-newspaper-o"></span></a></li>
-	    </ul>
+	    	<ul class="horizontal menu">
+	    		<li data-ng-show="user.voornaam !== undefined && user.voornaam !== ''">Hi <span data-ng-bind="user.voornaam"></span>!</li>
+		      	<li>
+		    		<a data-ng-click="toggleModeSwitcher()" data-ng-class="{active: modeSwitcher === true}">
+			      		<span class="fa fa-sitemap"></span>	    		
+			        </a>
+    				<div class="submenu" data-ng-class="{show: modeSwitcher === true}">
+				        <ul class="vertical menu">
+				        	<li><a data-ng-click="setMode('start')">Start</a></li>
+				        	<li><a data-ng-click="setMode('demo1')">Demo1 - Color</a></li>
+				        	<li><a data-ng-click="setMode('demo2')">Demo2 - Welke</a></li>
+				        	<li><a data-ng-click="setMode('demo3')">Demo3 - Gebruiker goed</a></li>
+				        	<li><a data-ng-click="setMode('demo4')">Demo4 - Gebruiker slecht</a></li>
+				        	<li><a data-ng-click="setMode('demo5')">Demo5 - Dokter</a></li>
+				        	<li><a data-ng-click="setMode('demo6')">Demo6 - Aanmelden</a></li>
+				        	<li><a data-ng-click="setMode('user1')">User1 - Gebruiker goed</a></li>
+				        	<li><a data-ng-click="setMode('user2')">User2 - Gebruiker slecht</a></li>
+				        	<li><a data-ng-click="setMode('user3')">User3 - Dokter</a></li>
+				        </ul>
+	    			</div>
+		        </li>
+		      	<li><a><span class="fa fa-comment"></span></a></li>
+		      	<li><a><span class="fa fa-newspaper-o"></span></a></li>
+		    </ul>
     </div>
 </div>

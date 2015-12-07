@@ -29,18 +29,40 @@
     padding:80px 20px 20px;;
 }
 .wrapper>.exit{
-        position:absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index:49;
-    }
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:49;
+}
+
+.panel-wrapper{
+    display:flex;
+    flex-direction:horizontal;
+    justify-content: space-between;
+    align-items: stretch;
+}
 .panel{
     background-color:#fff;
     border-radius:$borderradius;
     box-shadow: $panelshadow;
     border: 1px solid $bordercolor;
+    margin-bottom:20px;
+    display:block;
+}
+.panels>.panel:last-child{
+    margin-bottom:0;
+}
+.panel-wrapper>.panel, .panel-wrapper>.panels{
+    margin: 0 10px 20px;
+    width:100%;
+}
+.panel-wrapper>.panel:first-child, .panel-wrapper>.panels{
+    margin-left:0;
+}
+.panel-wrapper>.panel:last-child, .panel-wrapper>.panels{
+    margin-right:0;
 }
 .panel header{
     background-color: $bluebackground;
@@ -62,60 +84,11 @@
 .panel section{
     padding: 20px;
 }
-.title-bar {
-    background: $bluetinted;
-    padding:1rem;
-    .horizontal.menu{
-        position:relative;
-        >li>a{
-            margin: 0 1rem;
-            padding: 4px;
-            border-radius:6px;
-            z-index:51;
-            position:relative;
-        }
-        .menu{
-            visibility:hidden;
-            position:absolute;
-            top:-500px;
-            left:-88px;
-            width:250px;
-            z-index:50;
-            background-color:$white;
-            border: 1px solid $bordercolor;
-            text-align:left;
-            box-shadow:0 2px 5px $blackshadow;
-            transition: top 333ms ease;
-            a{
-                color:$blue;
-            }
-        }
-        .menu.show{
-            visibility:visible;
-            top:41px;
-        }
-    }
-    a{
-        color:#fff;
-    }
-    a.active{
-        color:$blue;
-        background-color:$white;
-    }
-    .exit{
-        position:absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index:98;
-    }
-}
 @media screen and (max-width: $break-medium) {
-    .content{
-        padding:10px;
+    .wrapper>.content{
+        padding:70px 10px 10px;
     }    
-    .panel{
+    .panel header{
         padding:10px;
     }
 }

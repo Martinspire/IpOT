@@ -32,3 +32,58 @@
     	color:$white;
     }
 }
+
+.title-bar {
+    background: $bluetinted;
+    padding:1rem;
+    .horizontal.menu{
+        position:relative;
+        >li>a{
+            margin: 0 1rem;
+            padding: 4px;
+            border-radius:6px;
+            position:relative;
+        }
+        .submenu{
+            visibility:hidden;
+            position:absolute;
+            top:41px;
+            left:-88px;
+            width:250px;
+            overflow:hidden;
+            &.show{     
+                visibility:visible;
+                .menu{           
+                    top:0;
+                }
+            }
+            .menu{
+                position:relative;
+                top:-500px;
+                width:100%;
+                background-color:$white;
+                border: 1px solid $bordercolor;
+                text-align:left;                
+                transition: top 333ms ease;
+                a{
+                    color:$blue;
+                }
+            }
+        }
+    }
+    a{
+        color:#fff;
+    }
+    a.active{
+        color:$blue;
+        background-color:$white;
+    }
+    .exit{
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index:98;
+    }
+}

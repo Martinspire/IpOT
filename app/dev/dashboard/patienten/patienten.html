@@ -1,14 +1,118 @@
 <div class="panel">
     <header>Patienten</header>
     <section>
-	    <p>Linkje naar: patient (<a ui-sref="base.patient">patient</a>)</p>
-	    <p>
-	    	Hier komt:
-	    	<ul>
-		    	<li>Overzicht van patienten om door te bladeren</li>
-		    	<li>Zoekformulier</li>
-		    	<li>Filters en paginering</li>
-	    	</ul>
-	    </p>
+   		<form name="patient-zoeken" data-ng-submit="zoeken()">
+		  <div class="input-group">
+		    <input class="input-group-field" type="search" placeholder="Zoek patient" data-ng-model="zoekterm"/>
+		    <a class="input-group-button button">Zoeken</a>
+		  </div>
+		</form>
+		<table class="patienten-tabel">
+			<thead>
+			    <tr>
+			        <th width="300">Naam</th>
+			        <th width="130">Patientnr</th>
+			        <th>Geboortedatum</th>
+			        <th width="266">Trend</th>
+			        <th>Opvallendheden</th>
+			        <th width="180">Laatste waarden</th>
+			        <th>Huidig advies</th>
+			        <th width="355">Opties</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr ui-sref="base.patient">
+			        <td>Ali Qadri</td>
+			        <td>100342</td>
+			        <td>03-10-1993</td>
+			        <td><div class="trend-grafiek" google-chart="true" chart="userGraph1" style="height:80px; width:100%;"></div></td>
+			        <td>Geen</td>
+			        <td>Gezondheid: 88%<br/>
+			        	Voeding: 73%<br/>
+			        	Lange termijn: 95%
+			        </td>
+			        <td>Minder zout eten</td>
+			        <td><a class="button">Bekijk</a><a class="button">Dossier</a><a class="button">Correspondentie</a></td>
+			    </tr>
+			    <tr ui-sref="base.patient">
+			        <td>Bert van Klaveren</td>
+			        <td>134213</td>
+			        <td>27-05-1956</td>
+			        <td><div class="trend-grafiek" google-chart="true" chart="userGraph2" style="height:80px; width:100%;"></div></td>
+			        <td>Geen</td>
+			        <td>Gezondheid: 55%<br/>
+			        	Voeding: 88%<br/>
+			        	Lange termijn: 89%
+			        </td>
+			        <td>Diareeremmers aanbevolen ivm 3 dagen diarree</td>
+			        <td><a class="button">Bekijk</a><a class="button">Dossier</a><a class="button">Correspondentie</a></td>
+			    </tr>
+			    <tr ui-sref="base.patient">
+			        <td>Govert de boer</td>
+			        <td>175383</td>
+			        <td>10-01-2001</td>
+			        <td><div class="trend-grafiek" google-chart="true" chart="userGraph3" style="height:80px; width:100%;"></div></td>
+			        <td>PH waarde van urine is wat hoog</td>
+			        <td>Gezondheid: 76%<br/>
+			        	Voeding: 87%<br/>
+			        	Lange termijn: 83%
+			        </td>
+			        <td>Minder frisdranken drinken en meer vitaminen eten.</td>
+			        <td><a class="button">Bekijk</a><a class="button">Dossier</a><a class="button">Correspondentie</a></td>
+			    </tr>
+			    <tr ui-sref="base.patient">
+			        <td>Maarten van den Brinke</td>
+			        <td>293481</td>
+			        <td>18-11-1986</td>
+			        <td><div class="trend-grafiek" google-chart="true" chart="userGraph4" style="height:80px; width:100%;"></div></td>
+			        <td>Geen</td>
+			        <td>Gezondheid: 99%<br/>
+			        	Voeding: 97%<br/>
+			        	Lange termijn: 98%
+			        </td>
+			        <td>Topfit</td>
+			        <td><a class="button">Bekijk</a><a class="button">Dossier</a><a class="button">Correspondentie</a></td>
+			    </tr>
+			    <tr ui-sref="base.patient">
+			        <td>Rik Winkelman</td>
+			        <td>033818</td>
+			        <td>06-07-2008</td>
+			        <td><div class="trend-grafiek" google-chart="true" chart="userGraph5" style="height:80px; width:100%;"></div></td>
+			        <td>Eerste signalen van prostaatkanker gedetecteerd</td>
+			        <td>Gezondheid: 67%<br/>
+			        	Voeding: 98%<br/>
+			        	Lange termijn: 72%
+			        </td>
+			        <td>Gezond blijven eten, komende week woensdag afspraak uroloog.</td>
+			        <td><a class="button">Bekijk</a><a class="button">Dossier</a><a class="button">Correspondentie</a></td>
+			    </tr>
+			    <tr ui-sref="base.patient">
+			        <td>Stanislav Borominchev</td>
+			        <td>134833</td>
+			        <td>12-09-1978</td>
+			        <td><div class="trend-grafiek" google-chart="true" chart="userGraph6" style="height:80px; width:100%;"></div></td>
+			        <td>Suikerwaarden aan de hoge kant</td>
+			        <td>Gezondheid: 89%<br/>
+			        	Voeding: 78%<br/>
+			        	Lange termijn: 87%
+			        </td>
+			        <td>Meer insuline spuiten de komende dagen</td>
+			        <td><a class="button">Bekijk</a><a class="button">Dossier</a><a class="button">Correspondentie</a></td>
+			    </tr>
+			</tbody>
+		</table>
+	
+		<ul class="pagination" role="navigation" aria-label="Pagination">
+		  <li class="disabled">Previous <span class="show-for-sr">page</span></li>
+		  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+		  <li><a href="#" aria-label="Page 2">2</a></li>
+		  <li><a href="#" aria-label="Page 3">3</a></li>
+		  <li><a href="#" aria-label="Page 4">4</a></li>
+		  <li><a href="#" aria-label="Page 5">5</a></li>
+		  <li><a href="#" aria-label="Page 6">6</a></li>
+		  <li><a href="#" aria-label="Page 7">7</a></li>
+		  <li><a href="#" aria-label="Page 8">8</a></li>
+		  <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+		</ul>	    
     </section>
 </div>

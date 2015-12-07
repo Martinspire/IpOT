@@ -2,3 +2,63 @@
     max-width:400px;
     max-height:300px;
 }
+.uitslag-start{
+	display:flex;
+	flex-direction: row;
+	.uitslag{
+		display:flex;
+		flex:1 1 auto;
+		flex-direction:column;
+		text-align:center;
+		position:relative;
+		.uitslag-icon{
+			display: inline-block;
+		    width: 128px;
+		    height: 128px;
+		    margin: 5px auto;
+		    font-size: 64px;
+			color: #fff;
+			border-radius:64px;
+			padding:22px;
+		}
+		.uitslag-procent{
+			display: inline-block;
+		    padding: 20px;
+		    margin: 0 auto;
+		}
+	}
+	.uitslag .uitslag-icon.good{
+		background-color: $green;
+	}
+	.uitslag .uitslag-icon.fine{
+		background-color: $yellow;
+	}
+	.uitslag .uitslag-icon.bad{
+		background-color: $orange;
+	}
+}
+.uitslag-start.icons{
+	height:150px;
+	.uitslag{
+		transform: scale(0.01);
+		transition: all 500ms cubic-bezier(.75,-0.01,.45,1.33);
+	}
+}
+.uitslag-start.icons.begin{
+	.uitslag{
+		transform: scale(1.0);
+	}
+}
+
+@media screen and (max-width: $break-medium) {
+	.uitslag-start .uitslag .uitslag-icon{
+        padding:0;
+        font-size:40px;
+        height:64px;
+        width:64px;
+        border-radius:32px;
+    } 
+	.uitslag-start.icons{
+		height:100px;
+	}
+}

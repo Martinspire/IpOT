@@ -53,7 +53,7 @@ gulp.task('compile-sass', function() {
         .pipe(sourcemaps.init())
         //.pipe(sasslint({config: '.sass-lint.yml'})) Currently broken
         //.pipe(sasslint.format()) Currently Broken
-        .pipe(sass(config.sassOptions).on('error', sass.logError))
+        .pipe(sass.sync(config.sassOptions).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(autoprefixer())
         .pipe(gulp.dest(config.outputScss));

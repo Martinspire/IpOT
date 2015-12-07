@@ -17,25 +17,21 @@ var GulpConfig = (function () {
         this.devScss = './app/dev/assets/sass/**/*.scss';
         this.devScssMain = './app/dev/assets/sass/main.scss';
         this.vendorJs = [
-        	'./node_modules/jquery/dist/jquery.js',
-		    './node_modules/chart.js/Chart.js',
-		    './app/dev/assets/scripts/MobileServices.Web-1.2.5.min.js',
+        	'./node_modules/jquery/dist/jquery.min.js',
 		    './app/dev/assets/scripts/ntc.js',
-		    './node_modules/angular/angular.js',
-		    './node_modules/angular-animate/angular-animate.js',
-		    './node_modules/angular-messages/angular-messages.js',
-		    './node_modules/angular-resource/angular-resource.js',
-		    './node_modules/angular-sanitize/angular-sanitize.js',
-		    './node_modules/angular-touch/angular-touch.js',
-		    './node_modules/angular-ui-router/release/angular-ui-router.js',
-		    './node_modules/angular-chart.js/dist/angular-chart.js',
-		    './node_modules/angular-azure-mobile-service/dist/angular-azure-mobile-service.js',
-		    './node_modules/foundation-sites/dist/foundation.js'
+		    './node_modules/angular/angular.min.js',
+		    './node_modules/angular-animate/angular-animate.min.js',
+		    './node_modules/angular-messages/angular-messages.min.js',
+		    './node_modules/angular-resource/angular-resource.min.js',
+		    './node_modules/angular-sanitize/angular-sanitize.min.js',
+		    './node_modules/angular-touch/angular-touch.min.js',
+		    './node_modules/angular-ui-router/release/angular-ui-router.min.js',
+		    './node_modules/angular-google-chart/ng-google-chart.min.js',
+		    './node_modules/foundation-sites/dist/foundation.min.js'
 		];
 		this.vendorCss = [
 		    './node_modules/font-awesome/css/font-awesome.min.css',
-		    './node_modules/foundation-sites/dist/foundation.min.css',
-		    './node_modules/angular-chart.js/dist/angular-chart.css'
+		    './node_modules/foundation-sites/dist/foundation.min.css'
 		];
 		this.vendorFonts = [
 			'./node_modules/font-awesome/fonts/*'

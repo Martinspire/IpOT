@@ -1,41 +1,184 @@
-<div class="panel">
-    <header>Patient</header>
-    <section>
-	    <div class="start-chart">
-	        <canvas id="line" class="chart chart-line" chart-data="data"
-	            chart-labels="labels" chart-legend="true" chart-series="series"
-	            chart-click="onClick" >
-	        </canvas>
+<div class="panel-wrapper">
+	<div class="panel">
+	    <header>Algemene gegevens</header>
+	    <section>
+		    <table class="patient-tabel">
+		    	<thead>
+		    		<tr>
+		    			<th colspan="2">Persoonsgegevens</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td align="right"><strong>Naam (voorletters)</strong></td>
+		    			<td>Bert van Klaveren (BDH)</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Geslacht</strong></td>
+		    			<td>Man</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Geboortedatum (Leeftijd)</strong></td>
+		    			<td>27-05-1956 (59)</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Gewicht</strong></td>
+		    			<td>108 kilo</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>BSN</strong></td>
+		    			<td>138583683489</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+		    <table class="patient-tabel">
+		    	<thead>
+		    		<tr>
+		    			<th colspan="2">Contactgegevens</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td align="right"><strong>Straat</strong></td>
+		    			<td>Laan van Schoutenburg</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Postcode</strong></td>
+		    			<td>6703 GP</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Woonplaats</strong></td>
+		    			<td>Wageningen</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Land</strong></td>
+		    			<td>Nederland</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Geboorteplaats</strong></td>
+		    			<td>Rotterdam</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Geboorteland</strong></td>
+		    			<td>Nederland</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>E-mailadres</strong></td>
+		    			<td>bert@vanklaveren-metseldiensten.nl</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Telefoonnummer</strong></td>
+		    			<td>0693920133</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+		    <table class="patient-tabel">
+		    	<thead>
+		    		<tr>
+		    			<th colspan="2">Verzekeringsgegevens</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td align="right"><strong>Naam verzekering</strong></td>
+		    			<td>OHRA (Centraal Beheer Achmea)</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Relatienummer</strong></td>
+		    			<td>868392</td>
+		    		</tr>
+		    		<tr>
+		    			<td align="right"><strong>Aanvullend</strong></td>
+		    			<td>Tandarts</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+		    <p><i>Informatie is samengesteld uit IpOT profiel en Electronisch Patient Dossier</i></p>
+	    </section>
+	</div>
+	<div class="panels">
+		<div class="panel">
+		    <header>IpOT resultaten</header>
+		    <section>
+		    	<div class="hoogtepunten">
+		    		<h2>Hoogtepunten</h2>
+		    		<ul>
+		    			<li>Eet de laatste tijd teveel vet voedsel</li>
+		    			<li>Heeft afgelopen maand 2 dagen diarree gehad</li>
+		    			<li>PH waarden liggen binnen de marge maar zijn aan de hoge kant</li>
+		    			<li>Kleur van urine is uitstekend</li>
+		    			<li>Neemt nog steeds medicatie ivm hartaanval van 2 jaar geleden. Geen problemen met medicatie.</li>
+		    		</ul>
+		    	</div>
+		    </section>
 	    </div>
-	    <p>	    	
-	    	Hier komt:
-	    	<ul>
-		    	<li>Diverse grafieken en tabellen. De denken valt aan:
-			    	<ul>
-				    	<li>Reden tot contact/meldingen
+		<div class="panel">
+		    <header>Metingen in afgelopen 10 weken</header>
+		    <section>
+	    	<div google-chart="true" chart="trend" style="height:300px; width:100%;"></div>
+		    </section>
+		</div>
+
+		<div class="panel">
+		    <header>Veelvoorkomende oorzaken van negatieve invloeden</header>
+		    <section>
+	    	<div google-chart="true" chart="fouten" style="height:300px; width:100%;"></div>
+		    </section>
+		</div>
+
+		<div class="panel">
+		    <header>Laatste adviezen</header>
+		    <section>	    	
+	    		<ul>
+	    			<li>Minder vet eten. Neem bijvoorbeeld maar 1x per week friet.</li>
+	    			<li>Tekort aan Vitamine B2 opvangen door meer melk te drinken en meer melkproducten te eten.</li>
+	    			<li>U kunt gerust een diarreeremmer pakken om de diarree te verminderen.</li>
+	    			<li>U heeft vandaag een perfecte score behaald op voeding.</li>
+	    			<li>De nieuwe medicatie voor uw hartkwalen lijkt aan te slaan. Blijf doorgaan met de huidige medicatie. U bent goed bezig.</li>
+	    		</ul>
+		    </section>
+		</div>
+
+		<div class="panel">
+		    <header>Grootste kansen op zoektes en aandoeningen</header>
+		    <section>
+		    	<div google-chart="true" chart="ziektes" style="height:300px; width:100%;"></div>
+		    </section>
+		</div>
+	</div>
+</div><!-- 
+<div class="panel">
+	    <header>Data</header>
+	    <section>
+		    <p>	    	
+		    	Hier komt:
+		    	<ul>
+			    	<li>Diverse grafieken en tabellen. De denken valt aan:
 				    	<ul>
-					    	<li>Stuur vragenlijst</li>
-				    	</ul>
-				    	</li>
-				    	<li>Laatste resultaten
-				    	<ul>
-					    	<li>trend</li>
-					    	<li>laatste waarde</li>
-					    	<li>status</li>
-					    	<li>datum/tijd</li>
-					    	<li>diagnose</li>
-				    	</ul></li>
-				    	<li>Tijdslijn met waarden en de bijbehorende marge/norm</li>
-				    	<li>Tijdslijn van wijzigingen (ziekenhuisopnames, medicijnen, contact ivm klachten, etc)</li>
-				    	<li>Laatst gegeven diagnoses</li>
-				    </ul>
-		    	</li>
-		    	<li>Patientinformatie (NAW, contactgegevens, betrokken artsen, verzekering, ziektes en aandoeningen, historie)</li>
-		    	<li>Notities</li>
-		    	<li>Filteren op bepaalde resultaten en betrokken informatie (bv alles in relatie tot suikerziekte)</li>
-			    	
-		    	<li>Filter, zoeken, paginering</li>
-	    	</ul>
-	    </p>
-    </section>
-</div>
+					    	<li>Reden tot contact/meldingen
+					    	<ul>
+						    	<li>Stuur vragenlijst</li>
+					    	</ul>
+					    	</li>
+					    	<li>Laatste resultaten
+					    	<ul>
+						    	<li>trend</li>
+						    	<li>laatste waarde</li>
+						    	<li>status</li>
+						    	<li>datum/tijd</li>
+						    	<li>diagnose</li>
+					    	</ul></li>
+					    	<li>Tijdslijn met waarden en de bijbehorende marge/norm</li>
+					    	<li>Tijdslijn van wijzigingen (ziekenhuisopnames, medicijnen, contact ivm klachten, etc)</li>
+					    	<li>Laatst gegeven diagnoses</li>
+					    </ul>
+			    	</li>
+			    	<li>Patientinformatie (NAW, contactgegevens, betrokken artsen, verzekering, ziektes en aandoeningen, historie)</li>
+			    	<li>Notities</li>
+			    	<li>Filteren op bepaalde resultaten en betrokken informatie (bv alles in relatie tot suikerziekte)</li>
+				    	
+			    	<li>Filter, zoeken, paginering</li>
+		    	</ul>
+		    </p>
+	    </section>
+	</div> -->

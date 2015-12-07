@@ -1,15 +1,22 @@
 <div class="panel">
     <header>Inloggen</header>
     <section>
-	    <div class="profiel">
-	        
-	    	Hier komt:
-	    	<ul>
-		    	<li>Inlogscherm</li>
-				<li>Link: login vergeten</li>
-		    	<li>Link: naar aanmelden, productinformatie en voorwaarden</li>
-				<li>Mooie animatie voor betreden van app</li>
-	    	</ul>
-	    </div>
+	    <form name="loginform" data-ng-submit="login()" novalidate="true">			 
+			<label for="username" >Gebruikersnaam:</label>
+			<input type="text" name="username" id="username"  maxlength="50" />
+			 
+			<label for="password" >Wachtwoord:</label>
+			<input type="password" name="password" id="password" maxlength="50" />
+			 
+			<input type="submit" name="Submit" value="Submit" />
+		</form>
     </section>
 </div>
+
+	<!-- Hier komt:
+	<ul>
+    	<li>Inlogscherm</li>
+		<li>Link: login vergeten</li>
+    	<li>Link: naar aanmelden, productinformatie en voorwaarden</li>
+		<li>Mooie animatie voor betreden van app</li>
+	</ul> -->

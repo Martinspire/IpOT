@@ -107,7 +107,7 @@ angular.module('ipot.services').factory('dataFactory', ['$rootScope', function($
 	modi.demo4 = {
 		currentUser: 'user2',
 		platform: 'mobile',
-		pagina: 'base.toilet'
+		pagina: 'base.mobile'
 	};
 	modi.demo5 = {
 		currentUser: 'user3',

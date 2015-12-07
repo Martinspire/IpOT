@@ -1,12 +1,36 @@
 <div class="panel">
+    <header>Laatste resultaat</header>
+    <section>
+	    <div class="uitslag-start icons" data-ng-class="{begin: finished === true}" data-ng-click="animateAgain()">
+			<div class="uitslag health"><div class="uitslag-icon" data-ng-class="icons('health')"><i class="fa fa-heart"></i></div></div>
+			<div class="uitslag food"><div class="uitslag-icon" data-ng-class="icons('food')"><i class="fa fa-cutlery"></i></div></div>
+			<div class="uitslag term"><div class="uitslag-icon" data-ng-class="icons('term')"><i class="fa fa-calendar"></i></div></div>
+	    </div>
+	    <div class="uitslag-start count">
+			<div class="uitslag health"><div class="uitslag-procent"><span id="count-health" count-to="{{values.health}}" value="{{countFrom}}" duration="1"></span>&#37;</div></div>
+			<div class="uitslag food"><div class="uitslag-procent"><span id="count-food" count-to="{{values.food}}" value="{{countFrom}}" duration="1"></span>&#37;</div></div>
+			<div class="uitslag term"><div class="uitslag-procent"><span id="count-term" count-to="{{values.term}}" value="{{countFrom}}" duration="1"></span>&#37;</div></div>
+	    </div>
+    </section>
+</div>
+<div class="panel">
+    <header>Advies</header>
+    <section>    
+	    <p data-ng-bind="advies">
+	    	
+	    </p>
+    </section>
+</div>
+<div class="panel">
+    <header>Lange termijn</header>
+    <section>	    
+	    <div google-chart="true" chart="chartObject" style="height:300px; width:100%;"></div>
+    </section>
+</div><!-- 
+<div class="panel">
     <header>Overzicht</header>
     <section>
-	    <div class="start-chart">
-	        <canvas id="line" class="chart chart-line" chart-data="data"
-	            chart-labels="labels" chart-legend="true" chart-series="series"
-	            chart-click="onClick" >
-	        </canvas>
-	    </div>
+	    <p><a data-ng-click="change()">Change</a></p>
 	    <p>Linkjes naar: toiletgang (<a ui-sref="base.toilet">toilet</a>), statistieken (<a ui-sref="base.stats">stats</a>), profiel (<a ui-sref="base.profiel">profiel</a>), advies (<a ui-sref="base.advies">advies</a>)</p>
 	    <p>
 	    	Hier komt:
@@ -18,4 +42,4 @@
 	    	</ul>
 	    </p>
     </section>
-</div>
+</div> -->

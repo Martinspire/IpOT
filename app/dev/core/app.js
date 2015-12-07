@@ -11,6 +11,5 @@ angular.module('ipot', [
     'ngMessages',
     'ngSanitize',
     'ngTouch',
-    'chart.js',
-    'azure-mobile-service.module'
+    'googlechart'
 ]);

@@ -7,7 +7,7 @@ angular.module('ipot').controller('coreController', ['$rootScope', '$state', 'da
     	console.log('new mode', newMode);
     	$rootScope.mode = newMode;
         if(redirect !== false){
-            $state.go(newMode.pagina);
+            $state.go(newMode.pagina, {}, { reload: true});
         }
     });
 
