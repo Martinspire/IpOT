@@ -5,23 +5,22 @@ angular.module('ipot').controller('colorController', ['$scope', '$http', '$timeo
     $scope.myColorText = '';
     $scope.autoUpdate = true;
     
-    var dummyData = {
-        'odata.metadata':'http://i-potwebapi.azurewebsites.net/odata/$metadata#ToiletgangResultaten',
-        'value':[
-            {
-                'Id':'38ce38b1-eb6a-4de9-9897-3113a0597658','KleurOmschrijving':'a94ac401','KleurCode':'#4AC401','Afwijkend':false
-            },{
-                'Id':'18a44071-5f6f-4cc0-9189-431ba303b1d8','KleurOmschrijving':'4f932a2c','KleurCode':'#932A2C','Afwijkend':false
-            },{
-                'Id':'f6a9490a-99a4-450f-af8c-f13f28ada02f','KleurOmschrijving':'213eb96','KleurCode':'#13EB96','Afwijkend':false
-            }
-        ]
-    };  
-    
     function getKleur(data){
         if(data.value !== undefined && data.value.length > 0){
             var kleur = data.value[data.value.length -1].KleurCode;
             if(kleur !== undefined && kleur !== ''){
+                $scope.noColor = false;
+                $scope.myColor = kleur;
+                $scope.myColorText = ntc.name(kleur)[1];
+            }
+            else if(data.value[data.value.length -2] !== undefined){ 
+                kleur = data.value[data.value.length -2].KleurCode;                
+                $scope.noColor = false;
+                $scope.myColor = kleur;
+                $scope.myColorText = ntc.name(kleur)[1];
+            }
+            else if(data.value[data.value.length -3] !== undefined){ 
+                kleur = data.value[data.value.length -3].KleurCode;                
                 $scope.noColor = false;
                 $scope.myColor = kleur;
                 $scope.myColorText = ntc.name(kleur)[1];
@@ -34,10 +33,10 @@ angular.module('ipot').controller('colorController', ['$scope', '$http', '$timeo
     
     
     function getData(){
-        $http.get('http://i-potwebapi.azurewebsites.net/odata/ToiletgangResultaten/').then(function(data){
-            console.log(data);
-            if(data !== undefined && data.data !== undefined){
-                getKleur(data.data);
+        $http.get('http://i-potwebapi.azurewebsites.net/odata/ToiletgangResultaten/').then(function(result){
+            console.log(result);
+            if(result !== undefined && result.data !== undefined){
+                getKleur(result.data);
             }
         }, function(error){
             console.log(error);
