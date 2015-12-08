@@ -1,0 +1,44 @@
+body.mobile{
+	background-image: url('../assets/images/phone.png');
+	background-size: 417px 767px;
+    background-clip:border-box;
+	background-repeat:no-repeat;
+	background-position: 100px 10px;;
+	position:absolute;
+	top:79px;
+	left:134px;
+	width:349px;
+	height:767px;
+	overflow:hidden;
+}
+body.mobile>.mobile-container{
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height:577px;
+}
+
+body.mobile{
+    .wrapper>.content{
+        padding:70px 10px 10px;
+    }    
+    .panel header{
+        padding:10px;
+    }
+
+	.panel-wrapper{
+	    flex-direction:vertical;
+	}
+	.uitslag-start .uitslag .uitslag-icon{
+        padding:0;
+        font-size:40px;
+        height:64px;
+        width:64px;
+        border-radius:32px;
+    } 
+	.uitslag-start.icons{
+		height:100px;
+	}
+    .title-bar .horizontal.menu>li>a{
+        margin:0 0.2rem;
+    }
+}

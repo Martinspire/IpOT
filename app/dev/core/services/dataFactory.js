@@ -87,52 +87,62 @@ angular.module('ipot.services').factory('dataFactory', ['$rootScope', function($
 	modi.start = {
 		currentUser: 'user1',
 		platform: 'start',
-		pagina: 'base.start'
+		pagina: 'base.start',
+		mobile: false
 	};
 	modi.demo1 = {
 		currentUser: 'user1',
 		platform: 'test',
-		pagina: 'base.color'
+		pagina: 'base.color',
+		mobile: false
 	};
 	modi.demo2 = {
 		currentUser: 'user1',
 		platform: 'test',
-		pagina: 'base.welke'
+		pagina: 'base.welke',
+		mobile: false
 	};
 	modi.demo3 = {
 		currentUser: 'user1',
 		platform: 'mobile',
-		pagina: 'base.mobile'
+		pagina: 'base.mobile',
+		mobile: true
 	};
 	modi.demo4 = {
 		currentUser: 'user2',
 		platform: 'mobile',
-		pagina: 'base.mobile'
+		pagina: 'base.mobile',
+		mobile: true
 	};
 	modi.demo5 = {
 		currentUser: 'user3',
 		platform: 'dashboard',
-		pagina: 'base.dashboard'
+		pagina: 'base.dashboard',
+		mobile: false
 	};
 	modi.demo6 = {
 		currentUser: 'user5',
 		platform: 'login',
-		pagina: 'base.aanmelden'
+		pagina: 'base.aanmelden',
+		mobile: false
 	};
 	modi.user1 = {
 		currentUser: 'user1',
 		platform: 'mobile',
-		pagina: 'base.mobile'
+		pagina: 'base.mobile',
+		mobile: false
 	};
 	modi.user2 = {
 		currentUser: 'user2',
 		platform: 'mobile',
-		pagina: 'base.mobile'
+		pagina: 'base.mobile',
+		mobile: false
 	};
 	modi.user3 = {
 		currentUser: 'user3',
 		platform: 'dashboard',
-		pagina: 'base.dashboard'
+		pagina: 'base.dashboard',
+		mobile: false
 	};
 
 	//nieuwe gebruiker instellen

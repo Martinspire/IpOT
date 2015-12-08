@@ -1,4 +1,4 @@
-angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeout', function($scope, $timeout){
+angular.module('ipot').controller('dashboardStartController', ['$scope', '$rootScope', '$timeout', function($scope, $rootScope, $timeout){
     console.log('dashboard start');
 
     $scope.mouseoverData = false;
@@ -6,7 +6,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
     $scope.steden =[
         {
             highlight: false,
-            value: 595,
+            value: 59,
             color: '#4caf50',
             colorName: 'green',
             name: 'Amsterdam',
@@ -14,7 +14,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 31,
+            value: 3,
             color: '#3598dc',
             colorName: 'blue',
             name: 'Arkel',
@@ -22,7 +22,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 155,
+            value: 15,
             color: '#ffc107',
             colorName: 'orange',
             name: 'Arnhem',
@@ -30,7 +30,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 265,
+            value: 26,
             color: '#8e44ad',
             colorName: 'purple',
             name: 'Delft',
@@ -38,7 +38,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 111,
+            value: 11,
             color: '#ffeb3b',
             colorName: 'yellow',
             name: 'Den Bosch',
@@ -46,7 +46,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 92,
+            value: 9,
             color: '#e7505a',
             colorName: 'red',
             name: 'Den Helder',
@@ -54,7 +54,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 407,
+            value: 40,
             color: '#f06292',
             colorName: 'pink',
             name: 'Eindhoven',
@@ -62,7 +62,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 249,
+            value: 24,
             color: '#8f939e',
             colorName: 'grey',
             name: 'Groningen',
@@ -70,7 +70,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 167,
+            value: 16,
             color: '#3f51b5',
             colorName: 'indigo',
             name: 'Leeuwarden',
@@ -78,7 +78,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 135,
+            value: 13,
             color: '#dce775',
             colorName: 'lime',
             name: 'Maastricht',
@@ -86,7 +86,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 386,
+            value: 38,
             color: '#4dd0e1',
             colorName: 'cyan',
             name: 'Utrecht',
@@ -94,7 +94,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         },
         {
             highlight: false,
-            value: 65,
+            value: 6,
             color: '#795548',
             colorName: 'brown',
             name: 'Zwolle',
@@ -103,11 +103,16 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
     ];
 
     $scope.stedenChart = {
-        type: 'BarChart',        
+        type: 'BarChart', 
+        options: {
+            legend: {
+                position: 'none'
+            }
+        },
         data: {
             cols: [
                 {id: 't', label: 'Plaatsnaam', type: 'string'},
-                {id: 's', label: 'Gevallen', type: 'number'},
+                {id: 's', label: 'Patienten', type: 'number'},
                 {role: 'style', type: 'string'}
             ],
             rows: []
@@ -153,6 +158,11 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
         highlight(selectedItem.row);
     };
 
+
+    $rootScope.$on('chartRefresh', function(){
+        $scope.stedenChart.options.forceRedrawNow = true;
+    });
+
     function start(){
         for(var a = 0; a < $scope.steden.length; a++){
             $scope.stedenChart.data.rows.push({c: [
@@ -160,7 +170,7 @@ angular.module('ipot').controller('dashboardStartController', ['$scope', '$timeo
                 {v: $scope.steden[a].value},
                 {v: $scope.steden[a].color}
             ]});
-            var size = Math.round($scope.steden[a].value / 100);
+            var size = Math.round($scope.steden[a].value / 10);
             $scope.steden[a].size = size;
         }
     }

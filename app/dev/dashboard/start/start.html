@@ -1,6 +1,6 @@
 <div class="panel-wrapper">
 	<div class="panel">
-	    <header>Besmetting per stad</header>
+	    <header>Overzichtskaart aantal patienten</header>
 	    <section>
 		    <div class="besmettingskaart" data-ng-class="{finished: finished === true}">
 		    	<div class="besmetting" data-ng-repeat="stad in steden" data-ng-class="[stad.className, 'size-' + stad.size, stad.colorName, {highlight: stad.highlight}]"></div>
@@ -10,9 +10,10 @@
 
 
 	<div class="panel">
-	    <header>Dashboard</header>
+	    <header>Patienten per stad</header>
 	    <section data-ng-mouseover="mouseover(true)" data-ng-mouseleave="mouseover(false)">
 		    <div class="steden-grafiek" google-chart="true" chart="stedenChart" data-agc-on-mouseover="mouseoverHandler(row, column)" data-agc-on-select="selectHandler(selectedItem)" style="height:600px; width:100%;"></div>
+		    <p><a class="button" data-ui-sref="base.patienten">Bekijk patienten</a></p>
 		</section>
 	</div>
 </div>

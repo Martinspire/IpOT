@@ -20,6 +20,12 @@ angular.module('ipot').controller('headerController', ['$scope', '$rootScope', '
         $rootScope.toggleSideMenu();
     };
 
+    $scope.toggleMobile = function(){
+        $rootScope.mode.mobile = !$rootScope.mode.mobile;
+        $rootScope.$broadcast('chartRefresh');
+        $rootScope.toggleModeSwitcher(false);
+    };
+
     $rootScope.$on('$stateChangeStart', function(){
         $scope.toggleModeSwitcher(false);
     });

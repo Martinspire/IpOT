@@ -310,6 +310,10 @@ angular.module('ipot').controller('mobileStartController', ['$scope', '$rootScop
         }
     };
 
+    $rootScope.$on('chartRefresh', function(){
+        $scope.chartObject.options.forceRedrawNow = true;
+    });
+
     $timeout(function(){
         $scope.finished = true;
     }, 500);

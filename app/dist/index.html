@@ -13,13 +13,15 @@
         <style>.ng-cloak { display: none; }</style>
     </head>
 
-    <body ng-controller="coreController" class="ng-cloak">
+    <body ng-controller="coreController" class="ng-cloak" data-ng-class="{mobile: mode.mobile === true}">
+        <div class="mobile-container">
             <div class="wrapper" data-ng-class="{'show-sidebar': showSideMenu === true}">
                 <div class="side-menu"><div ui-view="navigation"></div></div>
                 <div class="header"><div ui-view="header"></div></div>
                 <div ui-view="content" class="content"></div>
                 <div class="exit" data-ng-click="toggleSideMenu(false); toggleModeSwitcher(false);" data-ng-if="showSideMenu === true || modeSwitcher === true"></div>
             </div>
+        </div>
         <script src="scripts/vendor.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/templates.js"></script>
