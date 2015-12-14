@@ -22,10 +22,12 @@ angular.module('ipot').controller('welkeController', ['$scope', '$http', '$state
 				$scope.itemText = 'Kraanwater';
             }
             else if(conclusie === 'IsCola'){
-            	$scope.itemClass = 'Cola';
+            	$scope.itemClass = 'cola';
+                $scope.itemText = 'Cola';
             }
             else if(conclusie === 'IsFanta'){
-            	$scope.itemClass = 'Sinas';
+            	$scope.itemClass = 'sinas';
+                $scope.itemText = 'Fanta';
             }
         }
     } 
